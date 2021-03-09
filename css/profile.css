@@ -1,0 +1,254 @@
+@charset "utf-8";
+@font-face{
+    font-family: 'my-font';
+    src: url(../Cookie/Cookie-Regular.ttf);
+}
+@font-face {
+    font-family: 'dang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'syong';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Syongsyong.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* -------------------------- 반응형까진 추가하지못했습니다ㅠㅠ.... ------------------ */
+
+
+* {
+    padding: 0px; margin: 0px;
+    box-sizing: border-box;
+}
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html,body{
+    height: 100%;
+}
+.abc{
+    width: 100%;
+    height: 100%;
+    /* background: burlywood; */
+}
+.row{
+    max-width: 1100px; margin: 0px auto;
+}
+
+
+/* 해더----------------------------------------------------------------- */
+#header{
+    width: 100%;
+    border-bottom: 2px solid #ddd;
+    background: #FBF5EF;
+    position: fixed; top: 0px; left: 0px; right: 0px;
+    /* background-size: cover; */
+    padding: 10px;
+    z-index: 9999999;
+}
+/* 해더메뉴--------------------------------------------------------------- */
+#header .nav{
+    width: 100%;
+    position: relative;
+    color: #555;
+}
+#header .nav ul{
+    display: inline-block;
+}
+#header .nav .main li{
+    display: inline-block; 
+    font-size: 20px; font-family: 'dang';
+    padding-right: 20px;
+}
+#header .nav .icon{
+    position: absolute; right: 0px;
+}
+#header .nav .icon li{
+    display: inline-block;
+    font-size: 25px;
+    padding-left: 20px;
+}
+/* 본문--------------------------------------------------------------------- */
+#section{
+    height: 100%;
+    margin-top: 35px;
+}
+article{
+    height: 100%;
+}
+/* 본문1------------------------------------------------------------------- */
+#section .article1{
+    height: 100%;
+    padding-top: 33px;
+    background: url(../images/main-white.jpg) no-repeat;
+    background-position: center;
+}
+#section .article1 h1{
+    text-align: center;
+    font-size: 150px; font-family: 'my-font';
+    padding: 10px 0px;
+    color: rgba(0,0,0,0.8);
+    font-weight: bolder;
+}
+/* 본문2------------------------------------------------------------ */
+.article2{
+    padding-top: 40px;
+    height: auto;
+    border-bottom: 1px solid black;
+}
+.article2 .a2 .ho1 > div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.article2 .a2 h2{
+    font-family: 'syong';
+    font-weight: bolder;
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+.article2 .a2 .ho1{ 
+    background: url(../images/paper.jpg) no-repeat;
+    background-size: cover;
+    width: 0%; height: 0px;
+    overflow: hidden;
+    transition: 2s ease;
+}
+.article2 .a2 h2:hover + .ho1{ 
+    background: url(../images/paper.jpg) no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100%; height: auto;
+}
+.article2 .a2 .text{ 
+    width: 59%;
+    font-weight: bolder;
+    font-family: 'syong';
+    font-size: 30px;
+    padding-left: 50px;
+}
+.article2 .a2 .text > p{
+    line-height: 30px;
+}
+
+.article2 .a2 .img{
+    width: 39%;
+    text-align: center;
+    margin: 10px 10px ;
+}
+/* 본문3------------------------------------------------------------- */
+.article3{
+    padding-top: 40px;
+    height: auto;
+    border-bottom: 1px solid black;
+}
+.article3 .a3 > h2{
+    font-family: 'syong';
+    font-weight: bolder;
+    font-size: 80px;
+    text-align: center;    
+}
+.article3 .a3 .ho2{
+    background: url(../images/paper.jpg) no-repeat;
+    background-size: cover;
+    width: 0px; height: 0px;
+    overflow: hidden;
+    transition: 2s ease;
+}
+.article3 .a3 .ho2 >h2{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'dang';
+}
+.article3 .a3 .ho2 > ol{
+    text-align: center;
+    padding-left: 30px;
+    list-style: upper-roman;
+}
+.article3 .a3 .ho2 ol > li{
+    list-style-position: inside;
+    font-size: 25px;
+    line-height: 70px;
+}
+.article3 .a3 .ho2 ol li > p{
+    display: inline;
+    font-size: 30px;
+    font-family: 'syong';
+}
+.article3 .a3 h2:hover + .ho2{
+    width: 100%; height: auto;
+    display: block;
+}
+/* 본문4-------------------------------------------------------------- */
+.article4{
+    background: #FBF5EF;
+    padding: 50px 0px 100px;
+    height: auto; width: 100%;
+}
+.article4 .a4{
+    position: relative;
+}
+.article4 fieldset{
+    border: none;
+    text-align: center;
+}
+.article4 .a4 label{
+    display: inline-block;
+    font-size: 20px;
+}
+.article4 .a4 input{
+    height: 30px; width: 200px;
+    outline: 0;
+}
+.article4 fieldset > h2{
+    font-size: 70px; font-family: 'my-font';
+    padding: 20px 0px;
+}
+.article4 fieldset .info{
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 30px 20px;
+}
+.article4 fieldset .info > div{
+    margin: 10px 0px 20px;
+}
+.article4 fieldset .info2{
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 10px 20px 50px;
+    height: 100%;
+}
+.article4 fieldset .info2 textarea{
+    height: 185px;
+    resize: none;
+    padding: 5px 0px 0px 10px;
+    font-size: 20px;
+}
+.article4 fieldset .sub{
+    margin: 0px auto;
+}
+.article4 fieldset .sub input{
+    width: 70px;
+    background: #fff;
+}
+/* 고탑버튼----------------------------------------------------------- */
+.go-top{
+    position: fixed; right: 30px; bottom: 70px;
+    font-size: 50px;
+}
+/* 푸터-------------------------------------------------------------- */
+#footer{
+    background: black;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    height: 40px; line-height: 40px;
+    position: fixed; left: 0px; right: 0px; bottom: 0px;
+}
